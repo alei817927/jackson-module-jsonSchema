@@ -7,17 +7,19 @@ import com.fasterxml.jackson.databind.BeanProperty;
  */
 public interface ValidationConstraintResolver {
 
-    Integer getArrayMaxItems(BeanProperty prop);
+  String getTitle(BeanProperty prop);
 
-    Integer getArrayMinItems(BeanProperty prop);
+  Integer getArrayMaxItems(BeanProperty prop);
 
-    Double getNumberMaximum(BeanProperty prop);
+  Integer getArrayMinItems(BeanProperty prop);
 
-    Double getNumberMinimum(BeanProperty prop);
+  Double getNumberMaximum(BeanProperty prop);
 
-    Integer getStringMaxLength(BeanProperty prop);
+  Double getNumberMinimum(BeanProperty prop);
 
-    Integer getStringMinLength(BeanProperty prop);
+  Integer getStringMaxLength(BeanProperty prop);
 
-    String getStringPattern(BeanProperty prop);
+  Integer getStringMinLength(BeanProperty prop);
+
+  String getStringPattern(BeanProperty prop);
 }
