@@ -41,6 +41,24 @@ public class AnnotationConstraintResolver implements ValidationConstraintResolve
   }
 
   @Override
+  public Boolean readonly(BeanProperty prop) {
+    MeicSchema meicSchema = getMeicSchemaAnnotation(prop);
+    return meicSchema != null ? meicSchema.readonly() : null;
+  }
+
+  @Override
+  public Boolean hidden(BeanProperty prop) {
+    MeicSchema meicSchema = getMeicSchemaAnnotation(prop);
+    return meicSchema != null ? meicSchema.hidden() : null;
+  }
+
+  @Override
+  public String formType(BeanProperty prop) {
+    MeicSchema meicSchema = getMeicSchemaAnnotation(prop);
+    return meicSchema != null ? meicSchema.formType() : null;
+  }
+
+  @Override
   public Integer getArrayMaxItems(BeanProperty prop) {
     return getMaxSize(prop);
   }

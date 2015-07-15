@@ -76,6 +76,9 @@ public class ValidationSchemaFactoryWrapper extends SchemaFactoryWrapper {
   private JsonSchema addValidationConstraints(JsonSchema schema, BeanProperty prop) {
     SimpleTypeSchema simpleSchema = schema.asSimpleTypeSchema();
     simpleSchema.setTitle(constraintResolver.getTitle(prop));
+    simpleSchema.setFormType(constraintResolver.formType(prop));
+    simpleSchema.setHidden(constraintResolver.hidden(prop));
+    simpleSchema.setReadonly(constraintResolver.readonly(prop));
     if (schema.isArraySchema()) {
       ArraySchema arraySchema = schema.asArraySchema();
       arraySchema.setMaxItems(constraintResolver.getArrayMaxItems(prop));

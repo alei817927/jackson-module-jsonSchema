@@ -9,6 +9,12 @@ public interface ValidationConstraintResolver {
 
   String getTitle(BeanProperty prop);
 
+  Boolean readonly(BeanProperty prop);
+
+  Boolean hidden(BeanProperty prop);
+
+  String formType(BeanProperty prop);
+
   Integer getArrayMaxItems(BeanProperty prop);
 
   Integer getArrayMinItems(BeanProperty prop);

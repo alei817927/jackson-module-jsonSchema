@@ -31,7 +31,26 @@ public abstract class SimpleTypeSchema extends JsonSchema
 	 */
 	protected LinkDescriptionObject[] links;
 
-	@Override
+  private Boolean hidden;
+  private String formType;
+
+  public Boolean isHidden() {
+    return hidden;
+  }
+
+  public void setHidden(Boolean hidden) {
+    this.hidden = hidden;
+  }
+
+  public String getFormType() {
+    return formType;
+  }
+
+  public void setFormType(String formType) {
+    this.formType = formType;
+  }
+
+  @Override
 	public SimpleTypeSchema asSimpleTypeSchema() {
 		return this;
 	}

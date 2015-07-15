@@ -14,4 +14,10 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE, ElementType.FIELD})
 public @interface MeicSchema {
   String title() default "";
+
+  String formType() default "";
+
+  boolean readonly() default false;
+
+  boolean hidden() default false;
 }
